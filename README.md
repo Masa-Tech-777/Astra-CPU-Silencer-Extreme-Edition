@@ -78,6 +78,13 @@ Runs for a generous 60 minutes with full features, after which all settings safe
 
 > ⚠️ **Disclaimer & Support:** Extreme Edition is designed for self-responsible tuning. Ultra-low frequencies may slow down OS responsiveness temporarily (protected by our 15s fail-safe).  
 > If you encounter issues, run `Astra_Diagnostic_Tool.exe` included in the package to send us your hardware report via email.
+>
+> ==================================================
+[Disclaimer & Limitation of Liability]
+- This software utilizes native Windows APIs for CPU power management. However, due to the nature of adjusting CPU operating frequencies, extreme underclocking or setting ultra-low frequencies may cause temporary system unresponsiveness or OS freezes depending on your hardware configuration.
+- The software is provided "AS IS", without warranty of any kind, express or implied. In no event shall the developer (Masa Tech!! / Itachi) be liable for any direct, indirect, incidental, special, or consequential damages (including, but not limited to, hardware failure, loss of data, or business interruption) arising out of the use or inability to use this software.
+- Users are strongly advised to test system stability using the "Free Trial Version" prior to purchasing a full product license. Please use this utility at your own risk.
+==================================================
 
 ---
 
