@@ -29,8 +29,8 @@ While our Standard Edition enforces strict safety floors, the Extreme Edition co
    No fear of system freezes! If an ultra-low frequency causes system instability, the built-in 15-second countdown timer will automatically revert your settings back to the previous safe state unless confirmed.
 3. **[Hardware Spec Baseline Bar]**  
    Real-time display of your CPU's nominal base clock, recommended safe floor, and maximum boost ceiling right on the GUI.
-4. **Intel & AMD Dual Support] Zero Voltage Modification**  
-   Uses ONLY native Windows ACPI power management APIs. 100% safe from Blue Screen of Death (BSoD) risks without touching dangerous voltage registers.
+4. **[Intel & AMD Dual Support] Zero Voltage Modification**  
+   Uses ONLY native Windows ACPI power management APIs.safe from Blue Screen of Death (BSoD) risks without touching dangerous voltage registers.
 
 ---
 
