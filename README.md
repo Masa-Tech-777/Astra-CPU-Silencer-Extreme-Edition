@@ -1,6 +1,6 @@
 # Astra CPU Silencer Extreme Edition
 
-> **10MHz~ Unlocked Enthusiast Edition | Zero Voltage Tampering!**  
+> **10MHz~ Unlocked Enthusiast Edition | Windows ACPI Power Management**  
 > *Extreme Underclocking & Intelligent Silent Power Management Utility for Windows 10 / 11*
 
 ---
@@ -29,7 +29,7 @@ While our Standard Edition enforces strict safety floors, the Extreme Edition co
    No fear of system freezes! If an ultra-low frequency causes system instability, the built-in 15-second countdown timer will automatically revert your settings back to the previous safe state unless confirmed.
 3. **[Hardware Spec Baseline Bar]**  
    Real-time display of your CPU's nominal base clock, recommended safe floor, and maximum boost ceiling right on the GUI.
-4. **[Intel & AMD Dual Support] Zero Voltage Modification**
+4. **[Intel & AMD Dual Support] Windows ACPI Power Management**
    Uses only native Windows ACPI power management APIs and does not directly modify CPU voltage. Windows remains responsible for CPU power and frequency management, helping to reduce the risk of system instability and hardware-related issues.
 
 ---
@@ -119,7 +119,7 @@ Runs for a generous 60 minutes with full features, after which all settings safe
    クロックを極端に下げすぎてPCが不安定になった場合でも、15秒以内に「設定を維持」を押さなければ自動的に安全な直前の設定へと瞬時に巻き戻る安全復帰タイマーを標準搭載しています。
 3. **【一目でわかる】CPU基準スペック情報バーを新設**  
    お使いのPCの「定格ベースクロック」「メーカー推奨下限」「最大ブースト上限」をGUI上に常時表示。標準スペックを把握しながら安全かつ大胆にチューニングを楽しめます。
-4. **【世界初】Intel Core i ＆ AMD Ryzen 両プロセッサ自動ハイブリッド対応**  
+4. **【オリジナル】Intel Core i ＆ AMD Ryzen 両プロセッサ自動ハイブリッド対応**  
    危険な電圧操作（アンダーボルト）を行わず、Windows標準のACPI電源管理APIのみを使用。ブルースクリーン（BSoD）のリスクを低減します。
 
 ---
