@@ -1,14 +1,22 @@
-このたび、Astra CPU Silencer および Astra CPU Silencer Extreme Edition において、ライセンス認証周辺の不具合により、一部の環境で試用期間終了後に正常なライセンス申請・登録が行えない問題が発生しておりました。
+【お詫びとお詫びセールのご案内】
+このたび、Astra CPU Silencer および Astra CPU Silencer Extreme Edition において、ライセンス関連の不具合により、一部の環境で試用期間終了後に正常なライセンス申請・登録が行えない問題が発生しておりました。
 
-ご利用を検討してくださった皆様、ならびに実際にお試しいただいた皆様には、ご不便とご迷惑をおかけしましたことを心よりお詫び申し上げます。
+ご利用をご検討いただいた皆様、また実際にお試しいただいた皆様には、ご不便とご迷惑をおかけしてしまい、誠に申し訳ございません。
 
 現在、この不具合は修正済みです。
+また、なお、Astra CPU Silencerについては、Microsoft Defenderによる誤検知について現在Microsoftへ確認・再解析を申請しております。
 
-今後も、できる限り安心してお使いいただけるよう、動作確認と改善を継続してまいります。
+セール開始時には4時間以上空いておりますので、ご検知されましたらWindowsアップデートをしていただき、Microsoft Defenderの定義ファイルを更新して下さい。
 
-このたびは誠に申し訳ございませんでした。
+それでも誤検知されましたら、土曜日の午前中までお待ちいただき、Microsoft Defenderの定義ファイルの更新をお願いいたします。
+Microsoft Defenderでご検知された場合で、対処可能でしたら｢許可｣の操作をお願い致します🙇
 
-まさTech!! イタチ
+今回のお詫びとして、日本時間の土曜日 0:00 から日曜日 23:59 までの期間限定で、現在のセール価格からさらに40％OFFにて販売いたします。
+
+少しでもお詫びの気持ちをお伝えできれば幸いです。
+今後も、より安心してご利用いただけるよう、動作確認と改善を続けてまいります。
+
+まさTech!! イタチ🙇
 
 # Astra CPU Silencer Extreme Edition
 
@@ -25,17 +33,20 @@
 
 ## 🌐 English Description
 
-We sincerely apologize for an issue affecting Astra CPU Silencer and Astra CPU Silencer Extreme Edition.
+We sincerely apologize for a license-related issue affecting Astra CPU Silencer and Astra CPU Silencer Extreme Edition.
 
-Due to a problem related to the license system, some users were unable to properly proceed with license registration after the trial period had expired.
+Due to this issue, some users were unable to properly proceed with license application or registration after the trial period had expired.
 
-We sincerely apologize to everyone who considered using the applications, as well as those who tried them and encountered this issue.
+We are very sorry for the inconvenience caused to those who considered using the applications, as well as those who actually tried them.
 
-The problem has now been fixed.
+The issue has now been fixed.
+Please note that Astra CPU Silencer is currently under review by Microsoft regarding a suspected false-positive detection by Microsoft Defender.
+
+As a small gesture of apology, from 12:00 AM JST on Saturday until 11:59 PM JST on Sunday, both applications will be available at an additional 40% off the current sale price.
+
+We hope this limited-time offer can serve as a small expression of our apology.
 
 We will continue to improve testing and reliability so that the applications can be used with greater confidence.
-
-We sincerely apologize for the inconvenience.
 
 MasaTech itachi
 
