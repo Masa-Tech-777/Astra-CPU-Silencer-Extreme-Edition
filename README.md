@@ -442,8 +442,7 @@ https://masatech.booth.pm/
 
 ■ 診断ログ
 サポートや不具合調査のため、診断ログを保存します。フォルダの隠しファイルを表示してから、フォルダのパスを追って下さい。
-保存先：C:\Users\<Windowsユーザー名\AppData\Roaming\Astra_CPU_Silencer_Extreme\Astra_Extreme_Diagnostic_Log.txt  
-Windowsの環境変数では、次の場所と同じです。  
+保存先：C:\Users\<Windowsユーザー名\AppData\Roaming\Astra_CPU_Silencer_Extreme\Astra_Extreme_Diagnostic_Log.txt    
 
 ※ <Windowsユーザー名> の部分は、お使いのWindowsアカウント名に置き換わります。  
 配布フォルダやAstra CPU Silencer.exeと同じ場所には、診断ログを作成しません。  
