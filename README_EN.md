@@ -1,204 +1,221 @@
-# Astra CPU Silencer Extreme Edition
+Astra CPU Silencer v2.9.5
+README / English
+============================================================
 
-**Fine-grained CPU power management with 10 MHz adjustment steps and a 15-second confirmation and rollback safeguard.**
+■ Introduction
 
-Astra CPU Silencer Extreme Edition is an advanced Windows CPU power-management utility designed for users who want greater control over CPU power settings.
+Astra CPU Silencer is a Windows utility that adjusts CPU power-management
+settings using standard Windows power controls.
 
-Built around Windows' native power-management capabilities, Extreme Edition allows you to adjust CPU-related settings without directly modifying CPU voltage or BIOS configurations.
+It can manage maximum CPU frequency, minimum processor performance, boost
+behavior, and per-power-plan settings without using a custom kernel driver
+or directly changing CPU voltage.
 
-It extends the safety-oriented design philosophy of Astra CPU Silencer Standard by offering a wider adjustment range and finer control.
 
-## 💡 Why Choose Extreme Edition?
+■ Supported Environment
 
-Extreme Edition is designed for users who want more flexibility when balancing CPU performance, temperature, fan noise, and power consumption.
+・Windows 11 64-bit
+・Intel CPUs
+・AMD Ryzen CPUs
+・Administrator privileges are required
 
-Typical uses include:
+※ Windows 10 may work, but it is not officially supported.
+※ Actual behavior may vary depending on the CPU, BIOS, Windows power plan,
+   thermal conditions, and manufacturer-specific power-management features.
 
-- Reducing fan noise in quiet environments
-- Managing CPU heat during everyday tasks
-- Improving power efficiency on laptops
-- Experimenting with lower CPU performance limits
-- Fine-tuning power settings for different usage scenarios
 
-Actual results depend on the CPU, system firmware, Windows configuration, workload, cooling system, and other hardware-specific factors.
+■ Main Features
 
-## ⚙️ Main Features
+・Maximum CPU frequency control
+・Minimum processor performance control
+・Processor Performance Boost Mode control
+・Separate AC and DC settings
+・Per-Windows-power-plan settings
+・Startup support
+・CPU specification database
+・Restore Original
+・Full Reset
+・60-minute trial mode
+・License activation
+・Built-in update check
 
-- CPU frequency-limit adjustment in 10 MHz input steps
-- Minimum frequency input as low as 10 MHz
-- 0 MHz maximum setting for unlimited frequency
-- 15-second confirmation and rollback safeguard
-- Separate settings for AC and DC power
-- CPU boost behavior adjustment
-- Direct Windows power-plan switching
-- Three convenient performance presets
-- Exact-match CPU specification database
-- Restoration and reset functions
-- Japanese and English user interface
-- Windows startup support
-- Designed for Intel and AMD Ryzen processors
 
-**Important:** An entered frequency value is not a command to lock the CPU at that exact clock speed.
+■ Basic Usage
 
-Extreme Edition uses Windows power-management controls. Actual operating frequencies remain subject to Windows, CPU architecture, firmware, temperature, workload, and other system controls.
+1. Launch Astra CPU Silencer.
+2. Select the Windows power plan you want to configure.
+3. Set the AC and DC values.
+4. Click [Apply Settings].
 
-A 10 MHz input step does not guarantee that the processor can physically operate or be controlled in exact 10 MHz increments.
+Maximum Frequency:
+0 MHz means Unlimited.
 
-## 🛡️ 15-Second Confirmation and Rollback Safeguard
+This does not overclock the CPU.
+It removes the maximum-frequency limit applied by Astra CPU Silencer.
 
-Extreme Edition includes a confirmation mechanism intended to reduce the risk of accidentally retaining unsuitable settings.
+Minimum Frequency:
+The Standard edition uses a minimum input floor of 1400 MHz.
 
-When an Extreme setting is applied:
+The entered MHz value is converted to the Windows
+"Minimum processor state (%)" setting.
+It does not force the CPU to run at the entered MHz continuously.
 
-1. The application first captures the existing Windows CPU power settings.
-2. If the required rollback snapshot is successfully captured, the requested setting is applied.
-3. A confirmation window gives the user 15 seconds to accept the change.
-4. If the user confirms within the time limit, the new setting is retained.
-5. If the user does not confirm, closes the confirmation window, or chooses to revert, the application attempts to restore the previously captured settings automatically.
 
-**If the required rollback snapshot cannot be captured, the Extreme setting will not be applied.**
+■ CPU Specification Database
 
-This mechanism is a safety precaution, not a guarantee against every possible system failure.
+Astra CPU Silencer identifies the CPU model and uses the CPU specification
+database only when the model matches an entry exactly.
 
-Unexpected application termination, system instability, power interruption, or hardware-specific behavior may prevent successful restoration.
+For a verified CPU:
 
-## 🔍 Exact-Match CPU Specification Database
+・The registered base frequency is displayed.
+・The registered maximum frequency is displayed.
+・The registered maximum frequency is used as the allowed input ceiling.
 
-Extreme Edition uses a CPU specification database to identify verified processor models.
+If the CPU cannot be verified in the database, Astra CPU Silencer does not
+guess its maximum frequency.
 
-Manufacturer-published base and maximum frequencies are displayed only when the detected CPU manufacturer and model match a verified database entry.
+In that case, use 0 MHz for Unlimited.
 
-The application does not estimate the maximum supported frequency of an unverified CPU.
+If a value above the verified maximum is entered, the input field is corrected
+to the verified maximum, but Windows settings are not changed at that moment.
+Review the corrected value and click [Apply Settings] again.
 
-For unverified processors, use:
+A valid database copy may be cached locally for offline reuse.
 
-**0 MHz = Unlimited**
 
-### Automatic Input Correction
+■ 2500 MHz Safety Redirect
 
-Based on project hardware testing, an entered value of 2500 MHz is automatically adjusted to 2400 MHz.
+For this project, 2500 MHz is treated as a value that should be avoided based
+on hardware testing.
 
-This is an application-specific input adjustment and does not mean that 2500 MHz is inherently unsafe for all processors.
+If 2500 MHz is entered, Astra CPU Silencer automatically redirects it to:
 
-## ⚡ Three Performance Presets
+2400 MHz
 
-Extreme Edition includes three presets for convenient power-management adjustments.
 
-| Preset | AC Power | DC Power |
-|---|---|---|
-| 🟢 Extreme Low Power | 800 MHz | 600 MHz |
-| 🟡 Medium Silent | 3.0 GHz | 2.6 GHz |
-| 🔴 Normal Mode | Unlimited | Unlimited |
+■ Boost Mode
 
-All Extreme presets use the 15-second confirmation safeguard.
+Processor Performance Boost Mode uses the Windows values 0 through 6.
 
-The preset values are requested settings handled through Windows power management. They do not guarantee fixed operating frequencies.
+The default value is:
 
-## 🔄 Windows Power-Plan Management
+1 (Enabled)
 
-Extreme Edition allows users to select and activate power plans registered in Windows directly from the application's interface.
+The exact effect of each boost mode may vary depending on the CPU and
+Windows implementation.
 
-CPU-related settings can be managed separately for:
 
-- **AC:** External power connected
-- **DC:** Battery operation
+■ Restore Original and Full Reset
 
-Available controls and their actual effects may differ depending on the system.
+Open:
 
-## 🔧 Restore and Reset Functions
+Menu -> Restore Original / Full Reset
 
-### Restore Original
+[Restore Original]
+Restores the saved CPU power settings and Processor-menu visibility from
+before Astra CPU Silencer changed them.
 
-Attempts to restore the saved CPU power settings and Processor-menu visibility state from before Extreme Edition changed them.
+Use this when you want to return the PC to its previous state.
 
-### Full Reset
+[Full Reset]
+Restores Astra baseline CPU settings, reorganizes the Processor menu to the
+Astra Clean Baseline, and resets application settings.
 
-- Restores CPU power settings to the Astra-defined baseline
-- Resets the Processor-menu configuration to the application's baseline
-- Resets application settings
+Restore Original and Full Reset are intentionally different operations.
 
-**Note:** Full Reset is not a factory reset of Windows, the BIOS, or the computer.
 
-## 🎁 60-Minute Free Trial
+■ 60-Minute Trial
 
-Extreme Edition includes a 60-minute trial for users who have not registered a license.
+Without a registered license, Astra CPU Silencer can be used in a
+60-minute trial mode.
 
-Trial time is accumulated across sessions.
+Trial usage is accumulated.
 
-- Total trial duration: 60 minutes
-- Manually ending the trial preserves the remaining time for the next launch
-- When the trial expires, the application attempts to restore the saved pre-change CPU power settings
-- The Extreme Edition license-registration screen is then displayed
+Ending the test manually does not consume the remaining time.
+The remaining trial time continues on the next launch.
 
-The trial allows users to evaluate the software on their own hardware before purchasing.
+When the trial expires, Astra CPU Silencer attempts to restore the saved
+pre-change CPU power settings before displaying the license-registration screen.
 
-## 🔑 Extreme Edition License
 
-Commercial distribution through BOOTH is planned.
+■ License Activation
 
-After purchasing Extreme Edition, open:
+Open:
 
-**Menu → Register Extreme License Key**
+Menu -> Register License Key
 
-The application displays a Machine ID used for license registration.
+The application displays a Machine ID used for license issuance.
 
-Enter the issued Extreme Edition license key to activate the full version.
+Support / license requests:
+masatech.dev.apps@gmail.com
 
-## 💻 System Requirements
+BOOTH:
+https://masatech.booth.pm/
 
-| Item | Requirement |
-|---|---|
-| Officially supported OS | Windows 11, 64-bit |
-| Supported processor families | Intel / AMD Ryzen |
-| Permissions | Administrator privileges required |
-| Windows 10 | May work, but is not officially supported |
 
-Some features may be unavailable or behave differently depending on the processor, system firmware, manufacturer-specific power management, and Windows configuration.
+■ Diagnostic Log
 
-## 📂 Package Contents
+Astra CPU Silencer stores a diagnostic log for support and troubleshooting.
 
-Main application and documentation files:
+Location:
 
-- Astra CPU Silencer Extreme.exe
-- Readme_JP.txt
-- Readme_EN.txt
+%AppData%\Astra_CPU_Silencer\Astra_Diagnostic_Log.txt
 
-The final distribution package may also include third-party license notices, source-code archives for applicable third-party components, and other compliance documentation.
+The diagnostic log is stored inside AppData.
+It is not normally created beside the distributed EXE.
 
-The complete file list will be finalized before release.
+The log may contain information about the CPU, Windows power plans,
+detected settings, and power-setting operations required for troubleshooting.
 
-## 📄 Diagnostic Log
 
-Diagnostic information used for technical support and troubleshooting is stored at:
+■ Updates
 
-`%APPDATA%\Astra_CPU_Silencer_Extreme\Astra_Extreme_Diagnostic_Log.txt`
+Use:
 
-## ⚠️ Disclaimer and Important Notes
+Help -> Check for Updates
 
-Astra CPU Silencer Extreme Edition uses Windows' native power-management mechanisms and does not directly modify CPU voltage or BIOS settings.
+Astra CPU Silencer checks the latest GitHub Release.
 
-However, no software-based power-management approach can guarantee trouble-free operation on every system.
+GitHub:
+https://github.com/Masa-Tech-777/Astra-CPU-Silencer
 
-Depending on hardware, firmware, Windows configuration, and selected settings, users may experience reduced performance, unexpected system behavior, temporary freezes, or other problems.
 
-To the extent permitted by applicable law, the developer disclaims liability for damages arising from the use of, or inability to use, the software, including hardware damage, data loss, business interruption, and loss of opportunity.
+■ Uninstalling
 
-Users are strongly encouraged to evaluate the software using the free trial before purchasing.
+Astra CPU Silencer does not use a dedicated uninstaller.
 
-Use the software with an understanding of the risks associated with changing system power-management settings.
+Before deleting the application, use [Restore Original] or [Full Reset]
+if needed.
 
-## 💌 Support and Contact
+Then exit Astra CPU Silencer and delete the executable.
 
-For support, questions, or bug reports:
+If Startup registration is enabled, the restore/reset process removes the
+related Startup entry.
 
-**masatech.dev.apps@gmail.com**
 
----
+■ Important Notes
 
-**Development and Production**
+Astra CPU Silencer does not directly modify CPU voltage or BIOS settings,
+but it does change Windows CPU power-management settings.
 
-- Itachi (Kyokan / Masa Tech!!)
-- Astra
-- Mahiru
+Use settings appropriate for your system and verify system behavior after
+applying changes.
 
-*Designed for flexible CPU power management using native Windows capabilities.*
+Actual CPU frequency is affected by many factors, including:
+
+・CPU architecture
+・Windows power management
+・Current workload
+・Temperature
+・BIOS settings
+・Manufacturer-specific firmware and power controls
+
+The entered MHz value does not guarantee that the CPU will operate at exactly
+that frequency at all times.
+
+
+============================================================
+Astra CPU Silencer v2.9.5
+Support: masatech.dev.apps@gmail.com
+============================================================
