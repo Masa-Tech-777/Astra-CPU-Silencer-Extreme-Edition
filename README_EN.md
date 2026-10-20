@@ -242,6 +242,6 @@ that frequency at all times.
 
 
 ============================================================
-Astra CPU Silencer Extreme v2.5.0
+Astra CPU Silencer Extreme v2.5.1
 Support: masatech.dev.apps@gmail.com
 ============================================================
