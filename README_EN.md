@@ -1,10 +1,10 @@
-Astra CPU Silencer Extreme v2.5.1
+Astra CPU Silencer Extreme Edition v2.5.1
 README / English
 ============================================================
 
 ■ Introduction
 
-Astra CPU Silencer Extreme is the extended edition of Astra CPU Silencer.
+Astra CPU Silencer Extreme Edition is the extended edition of Astra CPU Silencer.
 
 It uses standard Windows CPU power-management controls to provide a wider
 adjustment range for maximum frequency, minimum processor performance,
@@ -57,7 +57,7 @@ You have 15 seconds to choose:
 [Keep Settings]
 
 If you do not confirm within 15 seconds, close the confirmation window,
-or choose [Revert Settings], Astra CPU Silencer Extreme restores the
+or choose [Revert Settings], Astra CPU Silencer Extreme Edition restores the
 Windows values captured immediately before the temporary change.
 
 If the required rollback snapshot cannot be captured, the Extreme setting
@@ -88,7 +88,8 @@ If a value above the verified maximum is entered, the input field is corrected
 to the verified maximum, but Windows settings are not changed at that moment.
 Review the corrected value and apply again.
 
-A valid database copy may be cached locally for offline reuse.
+The CPU specification database is embedded in the application.
+CPU lookup does not require Internet access or a downloaded cache.
 
 
 ■ 2500 MHz Safety Redirect
@@ -132,7 +133,7 @@ Menu -> Restore Original / Full Reset
 
 [Restore Original]
 Restores the saved CPU power settings and Processor-menu visibility from
-before Astra CPU Silencer Extreme changed them.
+before Astra CPU Silencer Extreme Edition changed them.
 
 Use this when you want to return the PC to its previous state.
 
@@ -149,12 +150,12 @@ Restore Original and Full Reset are intentionally different operations.
 
 ■ 60-Minute Trial
 
-Without a registered Extreme license, Astra CPU Silencer Extreme can be used
+Without a registered Extreme license, Astra CPU Silencer Extreme Edition can be used
 in a 60-minute trial mode.
 
 Trial usage is accumulated.
 
-Ending the test manually does not consume the remaining time.
+Time already used is counted; unused trial time is retained when you exit.
 The remaining trial time continues on the next launch.
 
 When the trial expires, Extreme attempts to restore the saved pre-change CPU
@@ -178,7 +179,11 @@ https://masatech.booth.pm/
 
 ■ Diagnostic Log
 
-Astra CPU Silencer Extreme stores a diagnostic log for support and
+Use Help -> Save diagnostic log… to copy the log to a location you select.
+You do not need to attach license keys or configuration files manually.
+Review the log before sending it for support.
+
+Astra CPU Silencer Extreme Edition stores a diagnostic log for support and
 troubleshooting.
 
 Location:
@@ -199,7 +204,7 @@ Use:
 
 Help -> Check for Updates
 
-Astra CPU Silencer Extreme checks the latest GitHub Release.
+Astra CPU Silencer Extreme Edition checks the latest GitHub Release.
 
 GitHub:
 https://github.com/Masa-Tech-777/Astra-CPU-Silencer-Extreme-Edition
@@ -207,12 +212,12 @@ https://github.com/Masa-Tech-777/Astra-CPU-Silencer-Extreme-Edition
 
 ■ Uninstalling
 
-Astra CPU Silencer Extreme does not use a dedicated uninstaller.
+Astra CPU Silencer Extreme Edition does not use a dedicated uninstaller.
 
 Before deleting the application, use [Restore Original] or [Full Reset]
 if needed.
 
-Then exit Astra CPU Silencer Extreme and delete the executable.
+Then exit Astra CPU Silencer Extreme Edition and delete the executable.
 
 If Startup registration is enabled, the restore/reset process removes the
 related Startup entry.
@@ -242,6 +247,35 @@ that frequency at all times.
 
 
 ============================================================
-Astra CPU Silencer Extreme v2.5.1
+Astra CPU Silencer Extreme Edition v2.5.1
 Support: masatech.dev.apps@gmail.com
 ============================================================
+
+■ Disclaimer and Compatibility
+
+Although the software uses standard Windows APIs, changes to CPU power settings may reduce responsiveness or temporarily freeze the system, depending on the PC and selected values.
+Masa Tech!! / イタチ disclaims responsibility for direct or indirect losses arising from use or inability to use the software, including hardware damage, data loss, business interruption and lost opportunities, to the extent permitted by applicable law.
+Please test compatibility using the free trial before purchasing and use the software at your own responsibility.
+Some manufacturer-specific motherboard or BIOS configurations may prevent control from working.
+Applicable third-party license rights and their warranty terms are not restricted by this product notice; see THIRD-PARTY-RIGHTS.txt.
+
+■ Distribution Files and Third-party Software
+
+Extract the entire ZIP before launching the EXE.
+README_JP.txt / README_EN.txt contain the Japanese and English instructions.
+THIRD_PARTY_NOTICES.txt lists components and acknowledgements; THIRD-PARTY-RIGHTS.txt explains third-party rights.
+licenses/ contains full license texts, component notices and the ScriptGuard author's permission record.
+source/ contains the official AutoHotkey 2.0.29 and Ahk2Exe/BinMod source archives, runtime modification notes and build/apply instructions.
+See source/BUILD-INFO.txt for this executable's build evidence and source/PROTECTED-RUNTIME-STATUS.txt for the supplied materials and verification limits.
+Example.ahk is a harmless example of the third-party protection workflow. It is not required to run the product.
+MasaTech's proprietary application source and license-issuing tools are not included.
+
+Product terms do not restrict copying, modification or redistribution rights granted by applicable third-party licenses.
+Third-party rights and warranty disclaimers are governed by their original license texts.
+
+Help -> About -> Third-party software and licenses displays the basic embedded notices.
+Those embedded documents can be viewed with the EXE alone. Consult the accompanying files for the newly supplied material and detailed build evidence.
+Editing accompanying files does not automatically change the embedded display in this version.
+When distributing this package, retain the complete set including licenses/ and source/ rather than distributing the EXE alone.
+
+We sincerely thank the authors and developers of AutoHotkey and TAC109, the author of ScriptGuard.
