@@ -13,6 +13,33 @@ and boost behavior.
 It does not use a custom kernel driver and does not directly modify CPU voltage.
 
 
+
+■ What Is Astra CPU Silencer Extreme Edition?
+
+Astra CPU Silencer Extreme Edition is a Windows utility for configuring CPU frequency limits
+and turbo boost behavior using numerical inputs and a selection of boost modes.
+It supports Intel CPUs and AMD Ryzen CPUs, automatically identifies the CPU model,
+and checks it against an embedded specification database. For an exact, verified match,
+the registered maximum frequency is used as the input ceiling.
+
+Extreme Edition accepts maximum and minimum frequency settings in 10 MHz steps.
+You can set a maximum-frequency limit within the CPU's turbo-boost range and select
+one of Windows' Processor Performance Boost Mode policies (values 0 through 6).
+
+Silencer does not continuously adjust the CPU clock itself.
+It applies configuration to Windows power management; Windows and the CPU then manage
+actual frequency changes and boost operation. No custom kernel driver or direct CPU
+voltage changes are used.
+
+For example, on a test system with an Intel Core i7-10510U (maximum boost frequency
+4900 MHz), a configured 3800 MHz ceiling resulted in an observed frequency of up to
+3798 MHz. This is a measurement on one development system, not a guarantee for other PCs.
+
+Extreme settings are applied temporarily and require confirmation within 15 seconds.
+Without confirmation, the application restores the Windows settings saved immediately
+before the change. See the sections below for model verification, input correction,
+safety confirmation, and recovery details.
+
 ■ Supported Environment
 
 ・Windows 11 64-bit
@@ -112,6 +139,42 @@ The default value is:
 
 The exact effect of each boost mode may vary depending on the CPU and
 Windows implementation.
+
+
+■ Boost Mode Options and Behavior
+
+Extreme Edition offers seven Windows boost policies, rather than just an on/off switch.
+The descriptions below summarize the intended policy. Actual behavior depends on
+the CPU, Windows processor power-management implementation, BIOS, and other conditions.
+Not every system will exhibit a distinct or identical effect for every mode.
+
+0: Disabled
+   Disables requests for performance above the processor's guaranteed level.
+
+1: Enabled
+   Uses the standard Windows boost policy. This is Extreme's default setting.
+
+2: Aggressive
+   Requests higher performance more aggressively; it does not mean the CPU
+   continuously runs at its highest clock frequency.
+
+3: Efficient Enabled
+   Allows boost while emphasizing energy efficiency.
+
+4: Efficient Aggressive
+   Uses a more performance-oriented policy while taking energy efficiency into account.
+
+5: Aggressive At Guaranteed
+   Requests additional performance aggressively relative to the guaranteed
+   performance level.
+
+6: Efficient Aggressive At Guaranteed
+   Requests additional performance relative to the guaranteed level while
+   taking energy efficiency into account.
+
+A maximum-frequency setting is a limit, not a fixed-clock command.
+Even with boost enabled, the observed frequency varies with workload, temperature,
+power conditions, Windows, and CPU implementation.
 
 
 ■ Presets
